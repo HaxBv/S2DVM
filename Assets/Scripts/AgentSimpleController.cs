@@ -5,9 +5,18 @@ public class AgentSimpleController : MonoBehaviour
 {
     public Transform Target;
     private NavMeshAgent agent;
+    public Vector3 InitialPosition;
+    public Vector3 OriginalBallPosition;
+
+    public bool ChangeTeleportBall;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        InitialPosition = transform.position;
+
+
+        OriginalBallPosition = Target.position;
     }
 
     
@@ -36,6 +45,28 @@ public class AgentSimpleController : MonoBehaviour
         {
             Gizmos.DrawLine(corners[i], corners[i + 1]);
             Gizmos.DrawSphere(corners[i], 0.2f);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Ball"))
+        {
+
+            if (!ChangeTeleportBall)
+            {
+                Target.transform.position = InitialPosition;
+                ChangeTeleportBall = true;
+                return;
+            }
+            else
+            { 
+
+                Target.transform.position = OriginalBallPosition;
+                ChangeTeleportBall = false;
+                return;
+            }
+            
         }
     }
 }
