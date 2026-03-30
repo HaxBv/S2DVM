@@ -20,6 +20,8 @@ public class AgentEnemyController : MonoBehaviour
         agent.speed = Random.Range(2,5);
         agent.acceleration = Random.Range(5, 10);
         agent.angularSpeed = Random.Range(120, 360);
+        agent.stoppingDistance = Random.Range(1, 3);
+        agent.avoidancePriority = Random.Range(50, 100);
     }
 
     void Update()

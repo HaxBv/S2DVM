@@ -3588,7 +3588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleController
   obstaclePrefab: {fileID: 373806908}
   Collider: {fileID: 373806912}
-  ValorNecesarioParaSubir: 8
+  ValorNecesarioParaSubir: 4
   CantidadASubir: 4
   Subio: 0
 --- !u!1001 &376969944
@@ -7595,7 +7595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleController
   obstaclePrefab: {fileID: 818007536}
   Collider: {fileID: 818007541}
-  ValorNecesarioParaSubir: 8
+  ValorNecesarioParaSubir: 4
   CantidadASubir: 4
   Subio: 0
 --- !u!65 &818007541
@@ -9955,7 +9955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleController
   obstaclePrefab: {fileID: 1077648739}
   Collider: {fileID: 1077648745}
-  ValorNecesarioParaSubir: 8
+  ValorNecesarioParaSubir: 4
   CantidadASubir: 4
   Subio: 0
 --- !u!65 &1077648745
@@ -14321,10 +14321,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 4
-  m_Acceleration: 7
+  m_Speed: 3
+  m_Acceleration: 5
   avoidancePriority: 1
-  m_AngularSpeed: 120
+  m_AngularSpeed: 100
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
